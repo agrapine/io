@@ -7,9 +7,11 @@ export class Gallery extends React.Component<{}, GalleryState> {
     this.loadGallery();
   }
 
-  loadGallery = async () => {
-    var photos = await fetch('api/gallery/photos').then(r => r.json()) as Photo[];
-    this.setState({ isLoading: false, photos });
+  loadGallery() {
+    var photos = fetch('api/gallery/photos').then(r => r.json()).then(data => {
+      const photos = data as Photo[];
+      this.setState({ isLoading: false, photos });
+    });
   };
 
   public render() {
