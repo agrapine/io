@@ -1,9 +1,9 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { App } from './components/App';
 
-function renderApp() {
-    ReactDOM.render(<App/>, document.getElementById('react-app'));
+function strap() {
+    render(<App/>, document.getElementById('app'));
 }
 
-renderApp();
+strap();
