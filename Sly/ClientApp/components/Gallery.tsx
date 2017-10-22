@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Card, { CardMedia, CardContent } from 'material-ui/Card';
+import { Typography } from 'material-ui';
 
 export class Gallery extends React.Component<{}, GalleryState> {
   constructor() {
@@ -16,22 +18,27 @@ export class Gallery extends React.Component<{}, GalleryState> {
 
   public render() {
     const { photos } = this.state;
-    return <div style={{display: 'flex'}}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', alignContent: 'space-around', justifyContent: 'center' }}>
-        {photos.map((p, i) => <Card key={i} photo={p} />)}
+    return <div>
+      <div style={{ margin: 8, padding: 8, display: 'flex', flexWrap: 'wrap' }}>
+        {photos.map((p, i) => <GalleryCard key={i} photo={p} />)}
       </div>
     </div>;
   }
 }
 
-class Card extends React.Component<CardProps, {}> {
+class GalleryCard extends React.Component<CardProps, {}> {
   render() {
     const { photo } = this.props;
-    return <a href={photo.imageUrl}>
-      <div style={{ display: 'flex', background: '#222', margin: '4px', padding: '8px' }}>
-          <img src={photo.thumbUrl} style={{ margin: 'auto', width: '128px', height: '128px', objectFit: 'cover' }} />
-      </div>
-    </a>;
+    return <div>
+      <Card style={{ maxHeight: 400, margin: 8, width: 128 }}>
+        <a href={photo.imageUrl}>
+          <CardMedia image={photo.thumbUrl} title={photo.description} style={{ height: 128 }} />
+        </a>
+        <CardContent>
+          <Typography>{photo.title}</Typography>
+        </CardContent>
+      </Card>
+    </div>;
   }
 }
 

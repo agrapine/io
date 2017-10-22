@@ -81,7 +81,7 @@ namespace Sly.Controllers
         },
         new Photo
         {
-          Title = "i m not that bright",
+          Title = "bright",
           Description = "...",
           ThumbUrl = "https://slyngallery.blob.core.windows.net/gallery/thumbs/i-m-not-that-bright.jpg",
           ImageUrl = "https://slyngallery.blob.core.windows.net/gallery/i-m-not-that-bright.jpg",
