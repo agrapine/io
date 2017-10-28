@@ -6,7 +6,7 @@ export class Gallery extends React.Component<{}, GalleryState> {
   constructor() {
     super();
     this.state = { isLoading: true, photos: [] };
-    this.loadGallery();
+    this.loadGallery();    
   }
 
   loadGallery() {
@@ -22,7 +22,7 @@ export class Gallery extends React.Component<{}, GalleryState> {
       <div style={{ margin: 8, padding: 8, display: 'flex', flexWrap: 'wrap' }}>
         {photos.map((p, i) => <GalleryCard key={i} photo={p} />)}
       </div>
-    </div>;
+    </div>;    
   }
 }
 
