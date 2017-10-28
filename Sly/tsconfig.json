@@ -3,17 +3,15 @@
     "baseUrl": ".",
     "module": "es2015",
     "moduleResolution": "node",
-    "target": "esnext",
+    "target": "es5",
     "jsx": "react",
     "sourceMap": true,
     "skipDefaultLibCheck": true,
     "strict": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true
+    "types": ["webpack-env"]
   },
   "exclude": [
-    "bin",
-    "node_modules"
+      "bin",
+      "node_modules"
   ]
 }
