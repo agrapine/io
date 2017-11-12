@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Io.Config;
 using Io.Data;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace Io
 {
@@ -35,7 +37,6 @@ namespace Io
     public void ConfigureServices(IServiceCollection services)
     {
       var config = Configuration.GetSection("appSettings").Get<AppConfig>();
-
       services.AddDbContext<IoDb>(opt => opt.UseSqlServer(config.ConnectionStrings.IoDb));
       services.AddMvc();
     }
@@ -54,8 +55,11 @@ namespace Io
       }
       else
       {
-        app.UseExceptionHandler("/Home/Error");
+        app.UseRewriter(new RewriteOptions().AddRedirectToHttps());
+        app.UseExceptionHandler("/Home/Error");        
       }
+
+      
 
       app.UseStaticFiles();
 
