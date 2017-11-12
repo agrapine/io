@@ -1,25 +1,27 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Web.Data.Cronic;
+using Io.Data;
+using System.Linq;
 
-namespace Web.Controllers
+namespace Io.Controllers
 {
   [Route("api/[controller]")]
   public class GalleryController : Controller
   {
 
-    private CronicData data;
+    private IoDb db;
 
-    public GalleryController(CronicData data)
+    public GalleryController(IoDb data)
     {
-      this.data = data;
+      this.db = data;
     }
 
 
     [HttpGet("[action]")]
     public IEnumerable<Photo> Photos()
     {
-      return data.Set<Photo>();
+      var photos = db.Set<Photo>().ToList();
+      return photos;
     }
   }
 }

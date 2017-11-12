@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Web.Data.Cronic
+namespace Io.Data
 {
   [Table("Photo")]
   public class Photo

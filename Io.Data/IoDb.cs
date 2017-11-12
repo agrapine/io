@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace Web.Data.Cronic
+namespace Io.Data
 {
-  public class CronicData : DbContext
+  public class IoDb : DbContext
   {
-    public CronicData(DbContextOptions<CronicData> options)
+    public IoDb(DbContextOptions<IoDb> options)
       : base(options)
     {
     }

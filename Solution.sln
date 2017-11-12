@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Io.Web", "Io.Web\Io.Web.csproj", "{84B637EE-B61B-49D5-8E91-AE394BF65318}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Io.Data", "Io.Data\Io.Data.csproj", "{FAD12186-DB4D-488F-9B24-465E1FF26ECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84B637EE-B61B-49D5-8E91-AE394BF65318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B637EE-B61B-49D5-8E91-AE394BF65318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B637EE-B61B-49D5-8E91-AE394BF65318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B637EE-B61B-49D5-8E91-AE394BF65318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAD12186-DB4D-488F-9B24-465E1FF26ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD12186-DB4D-488F-9B24-465E1FF26ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD12186-DB4D-488F-9B24-465E1FF26ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD12186-DB4D-488F-9B24-465E1FF26ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED7F247C-1D46-4919-92F9-4D78D29AAC93}
+	EndGlobalSection
+EndGlobal
