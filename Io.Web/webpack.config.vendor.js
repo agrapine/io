@@ -22,7 +22,9 @@ module.exports = (env) => {
         'isomorphic-fetch',
         'react',
         'react-dom',
-        'react-router-dom'],
+        'react-router-dom',
+        'material-ui',
+        'material-ui-icons'],
     },
     output: {
       path: path.join(__dirname, 'wwwroot', 'dist'),

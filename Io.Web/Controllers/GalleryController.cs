@@ -16,12 +16,7 @@ namespace Io.Controllers
       this.db = data;
     }
 
-
     [HttpGet("[action]")]
-    public IEnumerable<Photo> Photos()
-    {
-      var photos = db.Set<Photo>().ToList();
-      return photos;
-    }
+    public IEnumerable<Photo> Photos() => db.Set<Photo>();
   }
 }
